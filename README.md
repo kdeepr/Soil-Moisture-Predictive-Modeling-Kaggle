@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 A machine learning solution for predicting daily surface soil moisture 
 levels over a 93-day horizon (Oct–Dec 2024) using historical soil moisture 
 and precipitation data. The solution uses a delta-modeling approach with 
@@ -17,7 +17,7 @@ an inverse-RMSE weighted ensemble of 5 models and recursive forecasting.
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 Predict daily surface soil moisture (`sm_surface`) for 93 future days 
 given 639 days of historical observations and precipitation data.
 
@@ -29,7 +29,7 @@ given 639 days of historical observations and precipitation data.
 
 ---
 
-## 💡 Solution Approach
+## Solution Approach
 
 ### Delta Modeling Strategy
 Instead of predicting absolute soil moisture values, the model predicts 
@@ -52,7 +52,7 @@ Each prediction is a weighted combination of:
 
 ---
 
-## 🔧 Feature Engineering (72 Features)
+## Feature Engineering (72 Features)
 
 | Category | Features |
 |---|---|
@@ -67,7 +67,7 @@ Each prediction is a weighted combination of:
 
 ---
 
-## 🤖 Ensemble Models
+## Ensemble Models
 
 | Model | CV RMSE | Ensemble Weight |
 |---|---|---|
@@ -81,7 +81,7 @@ Weights computed via **inverse-RMSE weighting** — better CV score = higher wei
 
 ---
 
-## 📊 Validation Strategy
+## Validation Strategy
 - **Method:** 5-fold TimeSeriesSplit (respects temporal ordering)
 - **Metric:** Root Mean Squared Error (RMSE)
 - **Best Model:** Extra Trees (CV RMSE = 0.01154)
@@ -89,7 +89,7 @@ Weights computed via **inverse-RMSE weighting** — better CV score = higher wei
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Soil-Moisture-Predictive-Modeling-Kaggle/
@@ -102,7 +102,7 @@ Soil-Moisture-Predictive-Modeling-Kaggle/
 ```
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 pip install pandas numpy scikit-learn lightgbm
@@ -111,7 +111,7 @@ jupyter notebook soil-moisture-challenge-notebook-4.ipynb
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 | Component | Technology |
 |---|---|
 | Language | Python 3.12 |
